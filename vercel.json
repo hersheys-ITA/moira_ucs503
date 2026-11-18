@@ -1,7 +1,14 @@
 {
   "services": {
-    "backend": { "root": "backend/", "entrypoint": "app.main:app" },
-    "frontend": { "root": "frontend/" }
+    "backend": {
+      "root": "backend/",
+      "entrypoint": "app.main:app",
+      "framework": "fastapi"
+    },
+    "frontend": {
+      "root": "frontend/",
+      "framework": "vite"
+    }
   },
   "rewrites": [
     { "source": "/api/(.*)", "destination": { "service": "backend" } },
